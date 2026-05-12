@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  mihenk_zkp_node:
+    image: mihenk-core:latest
+    environment:
+      - ENCRYPTION_LEVEL=AES-256
+      - NETWORK_MODE=air-gapped
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
